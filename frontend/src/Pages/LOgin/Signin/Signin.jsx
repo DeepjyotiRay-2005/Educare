@@ -17,33 +17,13 @@ function Signin() {
     }
   }, [navigate]);
 
-  const collectdata = async (e) => {
+  const collectdata = (e) => {
     e.preventDefault();
 
-    console.log(name, email, password);
-
-    let result = await fetch('http://localhost:5000/register', {
-      method: 'POST',
-      body: JSON.stringify({ name, email, password }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    result = await result.json();
-
-    console.log(result);
-
-    if (result.error) {
-      // Set error message if credentials are invalid
-      setErrorMessage(result.error);
-    } else if (result.name) {
-      localStorage.setItem('user', JSON.stringify(result));
-      navigate('/'); // Navigate to home after successful sign in
-    } else {
-      // Handle any unexpected errors
-      setErrorMessage('Unexpected error occurred. Please try again.');
-    }
+    // Simulate a successful registration
+    const user = { name, email }; // Set user info
+    localStorage.setItem('user', JSON.stringify(user));
+    navigate('/'); // Navigate to home after successful registration
   };
 
   return (
@@ -51,7 +31,7 @@ function Signin() {
       <div className="login-container">
         <div className="screen">
           <div className="screen__content">
-            <form className="login">
+            <form className="login" onSubmit={collectdata}>
               <div className="login__field">
                 <i className="login__icon fas fa-user"></i>
                 <input
@@ -84,11 +64,13 @@ function Signin() {
                 {/* Conditionally render error message */}
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
               </div>
-              <button className="button login__submit" onClick={collectdata}>
+              <button className="button login__submit" type="submit">
                 <span className="button__text">Sign In Now</span>
                 <i className="button__icon fas fa-chevron-right"></i>
               </button>
-			  <div className='not-have-account'>if you have account <br />  <Link to='/login'>Log in</Link> </div>
+              <div className='not-have-account'>
+                If you have an account <br /> <Link to='/login'>Log in</Link>
+              </div>
             </form>
             <div className="social-login">
               <h3>Sign in via</h3>
