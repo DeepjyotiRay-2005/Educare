@@ -3,7 +3,7 @@ const cors = require('cors');
 require('./Db/Config');
 const { body, validationResult } = require('express-validator');
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 const app = express();
 const User = require('./db/User');
