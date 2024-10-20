@@ -1,0 +1,171 @@
+/* General Styles */
+.app {
+    width: 90vw;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(230, 230, 230);
+    padding: 20px;
+}
+
+.ask-q-container {
+    width: 80%;
+    background: rgb(230, 230, 230);
+    margin: 0 auto;
+}
+
+.ask-q-container h1 {
+    margin-top: 120px;
+}
+
+.post-form {
+    margin-bottom: 20px;
+}
+
+.post-form textarea {
+    font-size: 16px;
+    padding: 18px;
+    resize: none;
+    background: rgba(190, 190, 190, 0.7);
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+.post-form button, .comment-form button {
+    background-color: #C24914;
+    padding: 12px 14px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+}
+  
+.post {
+    background: rgb(240, 240, 240);
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0 auto; /* Center post */
+}
+
+.comment-form input {
+    font-size: 12px;
+    padding: 6px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.comment-form {
+    margin-top: 10px;
+}
+  
+.comment {
+    margin-left: 20px;
+    font-size: 0.9em;
+    color: #555;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: calc(100% - 40px);
+}
+
+.post img {
+    max-width: 30%;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.ask-q-container input[type="file"] {
+    margin-top: 10px;
+}
+
+.ask-q-container button {
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.post-list {
+    margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .app {
+        width: 95vw;
+        padding: 10px;
+    }
+
+    .ask-q-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .post {
+        width: 100%;
+    }
+
+    .post img {
+        max-width: 50%; /* Allow images to take up more space on smaller screens */
+    }
+
+    .post-form textarea {
+        font-size: 14px;
+        height: 80px;
+    }
+
+    .post-form button, .comment-form button {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .comment-form input {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app {
+        width: 100vw;
+        padding: 5px;
+    }
+
+    .ask-q-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .post-form textarea {
+        font-size: 12px;
+        height: 70px;
+    }
+
+    .post-form button, .comment-form button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .post img {
+        max-width: 70%;
+    }
+
+    .comment-form input {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

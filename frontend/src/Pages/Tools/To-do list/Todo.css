@@ -1,0 +1,248 @@
+
+/* To-Do List Container */
+.to-do-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    min-width: 640px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.3);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-section .input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 200px;
+    max-width: 100%;
+}
+
+.schedule-date {
+    width: 200px;
+}
+
+/* Buttons */
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+/* Alert Message */
+.alert-message {
+    color: red;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    transform: scale(0.9);
+}
+
+
+.alert-message.show {
+    display: block;
+    transform: scale(1);
+}
+
+.alert-message.hide {
+    display: none;
+}
+
+/* Filter Section */
+.todos-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Todo List */
+.todos-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-height: 54vh;
+    overflow-y: auto;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.todo-item p {
+    margin-right: 10px;
+}
+
+.todo-actions {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.todo-actions button:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Theme Switcher */
+.theme-switcher {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.theme-switcher .dropdown {
+    display: inline-block;
+}
+
+.theme-switcher .dropdown-content {
+    min-width: 120px;
+}
+
+.theme-switcher .theme-item {
+    cursor: pointer;
+}
+
+/* Author Text */
+.author-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.author-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.author-text a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Alignment */
+.author-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.input-section .task-input{
+    width: 60%;
+}
+
+/* Responsive */
+@media only screen and (max-width: 530px) {
+    .to-do-list-container {
+        margin: 0 20px;
+        max-width: 90%;
+        min-width: 70%;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .input-section{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

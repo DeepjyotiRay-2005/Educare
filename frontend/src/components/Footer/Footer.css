@@ -1,0 +1,69 @@
+.footer {
+    position: absolute;
+    width: 100%;
+    padding: 60px 120px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F9E0AE;
+    font-family: 'Poppins';
+}
+
+
+
+.footer div {
+    text-align: center;
+}
+
+.footer div a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.footer .logo {
+    font-size: 40px;
+    font-family: 'Jim Nightshade';
+}
+
+.footer .follow a i {
+    font-size: 37px;
+    padding: 20px;
+}
+
+.footer div ul {
+    text-align: left;
+}
+
+.footer div ul li {
+    padding: 12px;
+    padding-left: 0;
+}
+
+.footer div ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer div ul li::marker {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.footer .contacts ul {
+    list-style: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .footer {
+        width: 100%;
+        text-align: left;
+        padding: 20px;
+        margin-top: 80px;
+        font-size: 12px;
+        gap: 10px;
+    }
+    .footer .follow a i {
+        display: flex;
+        font-size: 17px;
+    }
+    .footer .logo {
+        font-size: 20px;
+    }
+}
